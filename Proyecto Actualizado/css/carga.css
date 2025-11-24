@@ -1,0 +1,292 @@
+/* Fuente arcade retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    background-image:
+            radial-gradient(white 1px, transparent 1px),
+            radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    min-height: 100vh;
+}
+
+/* ============ HEADER ============ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    border-bottom: 4px solid #2121DE;
+    box-shadow: 0 0 20px #2121DE;
+    z-index: 100;
+    padding: 15px 20px;
+}
+
+.div1 {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imgLogo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FFFF00;
+    border-radius: 5px;
+}
+
+.titulo-header {
+    color: #FFFF00;
+    font-size: 0.7em;
+    text-shadow: 2px 2px 0px #FF0000;
+}
+
+/* Menu navegacion */
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu nav ul li a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-size: 0.6em;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu nav ul li a:hover {
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+    box-shadow: 0 0 10px #FFFF00;
+}
+
+/* ============ MAIN ============ */
+main {
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+/* Titulo "Selecciona tu juego" */
+.titulo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    display: inline-block;
+    color: #000000;
+    background-color: #FFFF00;
+    font-size: 0.8em;
+    padding: 20px 40px;
+    border: 4px solid #FFFF00;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+/* ============ GALERIA DE JUEGOS ============ */
+.galeria-container {
+    overflow: hidden;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria {
+    display: flex;
+    gap: 25px;
+    animation: scroll-galeria 20s linear infinite;
+    width: max-content;
+}
+
+.galeria:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-galeria {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Tarjetas de juegos */
+.divisionImagen {
+    width: 300px;
+    height: 250px;
+}
+
+.divisionImagen figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #2121DE;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(33, 33, 222, 0.5);
+    transition: all 0.3s ease;
+}
+
+.divisionImagen figure:hover {
+    border-color: #FFFF00;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
+    transform: scale(1.05);
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.divisionImagen figure:hover .imagen {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+/* Texto sobre imagen */
+.divisionTexto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.divisionImagen figure:hover .divisionTexto {
+    opacity: 1;
+}
+
+.nombreJuego {
+    color: #FFFF00;
+    font-size: 0.7em;
+    text-align: center;
+    text-shadow: 2px 2px 0px #FF0000;
+    padding: 10px;
+}
+
+/* Linea separadora */
+.lineaPunteada {
+    border: none;
+    border-top: 3px dashed #2121DE;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* ============ BOTON VOLVER ============ */
+.boton-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.volver {
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    background-color: transparent;
+    border: 3px solid #00FFFF;
+    color: #00FFFF;
+    padding: 30px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.volver:hover {
+    background-color: #00FFFF;
+    color: #000000;
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+
+/* ============ FOOTER ============ */
+footer {
+    background-color: #000000;
+    border-top: 4px solid #FFFF00;
+    padding: 30px 20px;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer h3 {
+    color: #FFFF00;
+    font-size: 0.7em;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    color: #00FFFF;
+    font-size: 0.5em;
+    margin-bottom: 8px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .div1 {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .titulo-header {
+        font-size: 0.5em;
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    .titulo {
+        font-size: 0.6em;
+        padding: 15px 20px;
+    }
+
+    .divisionImagen {
+        width: 250px;
+        height: 200px;
+    }
+
+    .nombreJuego {
+        font-size: 0.5em;
+    }
+}

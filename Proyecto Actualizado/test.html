@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rolon Luana, Rodriguez Virginia">
+    <meta name="description" content="Test de conocimientos sobre Pacman">
+    <meta name="keywords" content="pacman, test, quiz, trivia, juego">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/test.css">
+    <title>Test - Pacman</title>
+</head>
+<body onload="setInterval(animarPacman, 50)">
+
+<!-- Canvas y animacion -->
+<div class="divCanvas">
+    <canvas id="myCanvas" class="canvas" height="500" width="1500"></canvas>
+</div>
+
+<!-- Box de preguntas y respuestas -->
+<h2>TEST</h2>
+<main>
+    <div class="content">
+        <span class="contadorpreguntas"></span>
+        <span class="question"></span>
+        <div class="answers"></div>
+    </div>
+    <div class="finish">
+        <span></span>
+        <button>Reiniciar</button>
+    </div>
+</main>
+
+<!-- Boton volver -->
+<div class="boton-container">
+    <a href="carga.html" class="volver">Volver</a>
+</div>
+
+<script src="js/canvascript.js"></script>
+<script src="js/testscript.js" type="module"></script>
+</body>
+</html>

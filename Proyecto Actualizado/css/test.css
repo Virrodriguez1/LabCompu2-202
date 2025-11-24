@@ -1,0 +1,190 @@
+/* Fuente arcade retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #000000;
+    background-image:
+            radial-gradient(white 1px, transparent 1px),
+            radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
+}
+
+/* Titulo TEST */
+body h2 {
+    color: #FFFF00;
+    font-size: 2em;
+    text-shadow:
+            3px 3px 0px #FF0000,
+            -1px -1px 0px #00FFFF;
+    letter-spacing: 5px;
+}
+
+/* Canvas container */
+.divCanvas {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 10px;
+}
+
+.canvas {
+    width: 100%;
+    height: 150px;
+    border: 4px solid #2121DE;
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+/* Caja principal del quiz */
+main {
+    background-color: #000000;
+    border: 4px solid #2121DE;
+    border-radius: 8px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+            0 0 10px #2121DE,
+            0 0 20px #2121DE,
+            inset 0 0 10px rgba(33, 33, 222, 0.3);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Contador de preguntas */
+.contadorpreguntas {
+    text-align: right;
+    color: #00FFFF;
+    font-size: 0.7em;
+}
+
+/* Pregunta */
+.question {
+    color: #FFFFFF;
+    font-size: 0.85em;
+    line-height: 1.8;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Contenedor de respuestas */
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botones de respuesta */
+.answers button,
+button.answer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    border: 3px solid #FFFF00;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #FFFF00;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65em;
+    transition: all 0.2s ease;
+}
+
+.answers button:hover,
+button.answer:hover {
+    background-color: #FFFF00;
+    color: #000000;
+    box-shadow: 0 0 15px #FFFF00;
+    transform: scale(1.02);
+}
+
+/* Pantalla de finalización */
+.finish {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+/*has acertado..*/
+.finish span {
+    color: #00FF00;
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+.finish button {
+    background-color: #FF0000;
+    border: 3px solid #FF0000;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.finish button:hover {
+    background-color: #FFFFFF;
+    color: #FF0000;
+    box-shadow: 0 0 15px #FF0000;
+}
+
+/* Contenedor botón volver */
+.boton-container {
+    margin-top: 20px;
+}
+
+/* Botón volver */
+.volver {
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    background-color: transparent;
+    border: 3px solid #00FFFF;
+    color: #00FFFF;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.volver:hover {
+    background-color: #00FFFF;
+    color: #000000;
+    box-shadow: 0 0 15px #00FFFF;
+}
+
+.volver a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+}
+
+.volver:hover a {
+    color: #000000;
+}

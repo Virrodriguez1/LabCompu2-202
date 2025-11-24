@@ -1,0 +1,283 @@
+/* Fuente arcade retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* ============ HEADER ============ */
+header {
+    background-color: #000000;
+    border-bottom: 4px solid #2121DE;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 20px #2121DE;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    color: #FFFF00;
+    font-size: 1.5em;
+    text-shadow: 3px 3px 0px #FF0000;
+    margin-bottom: 15px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+header a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-size: 0.6em;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+    box-shadow: 0 0 10px #FFFF00;
+}
+
+/* ============ SECCION PLAY ============ */
+#play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px;
+    background-color: #000000;
+    background-image:
+            radial-gradient(white 1px, transparent 1px),
+            radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+#play h1 {
+    color: #FFFF00;
+    font-size: 1.5em;
+    text-shadow: 4px 4px 0px #FF0000;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+#play button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    padding: 20px 50px;
+    background-color: transparent;
+    border: 4px solid #FFFF00;
+    color: #FFFF00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#play button:hover {
+    background-color: #FFFF00;
+    color: #000000;
+    box-shadow: 0 0 30px #FFFF00;
+    transform: scale(1.05);
+}
+
+/* ============ SECCION QUIENES SOMOS ============ */
+#ViryLu {
+    background-color: #0a0a0a;
+    border-top: 4px solid #2121DE;
+    border-bottom: 4px solid #2121DE;
+}
+
+#ViryLu .container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#ViryLu h2 {
+    color: #00FFFF;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px #2121DE;
+}
+
+#ViryLu .color-acento {
+    color: #FFFF00;
+}
+
+#ViryLu p {
+    color: #FFFFFF;
+    font-size: 0.6em;
+    line-height: 2.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#ViryLu .img-container {
+    display: none;
+}
+
+/* ============ SECCION HISTORIA ============ */
+#historiapacman {
+    background-color: #000000;
+    background-image:
+            radial-gradient(#2121DE 1px, transparent 1px);
+    background-size: 30px 30px;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#historiapacman .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#historiapacman h2 {
+    color: #FFFF00;
+    font-size: 1.3em;
+    text-shadow: 3px 3px 0px #FF0000;
+    margin-bottom: 50px;
+}
+
+#historiapacman .puckman {
+    background-color: rgba(33, 33, 222, 0.2);
+    border: 4px solid #2121DE;
+    border-radius: 10px;
+    padding: 40px 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(33, 33, 222, 0.5);
+}
+
+#historiapacman h3 {
+    color: #00FFFF;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+#historiapacman p {
+    color: #FFFFFF;
+    font-size: 0.55em;
+    line-height: 2.5;
+    margin-bottom: 30px;
+}
+
+#historiapacman button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6em;
+    padding: 15px 25px;
+    background-color: transparent;
+    border: 3px solid #FF0000;
+    color: #FF0000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#historiapacman button:hover {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    box-shadow: 0 0 20px #FF0000;
+}
+
+/* ============ FOOTER ============ */
+footer {
+    background-color: #000000;
+    border-top: 4px solid #FFFF00;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer p {
+    color: #00FFFF;
+    font-size: 0.5em;
+    line-height: 2.5;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 850px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .logo {
+        margin-bottom: 0;
+    }
+
+    header nav {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #play h1 {
+        font-size: 2.5em;
+    }
+
+    #ViryLu .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+
+    #ViryLu .texto {
+        max-width: 500px;
+    }
+
+    #ViryLu .img-container {
+        display: block;
+        width: 300px;
+        height: 300px;
+        background-image: url("../img/Us.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 4px solid #FFFF00;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
+    }
+
+    #historiapacman h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 1200px) {
+    #play h1 {
+        font-size: 3em;
+    }
+}
