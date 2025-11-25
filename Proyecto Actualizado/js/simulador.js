@@ -3,7 +3,6 @@
  * Fórmula: distancia = velocidad × tiempo
  */
 
-// ============ VARIABLES GLOBALES ============
 
 // Obtenemos los elementos del HTML
 let canvas = document.getElementById("canvas");
@@ -11,6 +10,7 @@ let ctx = canvas.getContext("2d");
 
 let inputVelocidad = document.getElementById("velocidad");
 let inputTiempo = document.getElementById("tiempo");
+
 let inputTamanio = document.getElementById("tamanio");
 let spanResultado = document.getElementById("resultado");
 
@@ -23,7 +23,6 @@ let posicionX = 50;
 let animacionActiva = null;
 let distanciaFinal = 0;
 
-// ============ FUNCIONES ============
 
 /**
  * Valida que los valores ingresados sean correctos
@@ -82,10 +81,10 @@ function calcularDistancia(velocidad, tiempo) {
  * @param {number} tamanio - Tamaño de Pacman
  */
 function dibujarPacman(x, tamanio) {
-    // Limpiar el canvas
+    // limpiar el canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Dibujar línea del suelo
+    //  línea del suelo
     ctx.strokeStyle = "#2121DE";
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -118,7 +117,7 @@ function animarPacman() {
     let velocidad = Number(inputVelocidad.value);
     let tamanio = Number(inputTamanio.value);
 
-    // Si llegó al destino, parar
+    // que pare al llegar
     if (posicionX >= distanciaFinal + 50) {
         cancelAnimationFrame(animacionActiva);
         animacionActiva = null;
@@ -140,13 +139,13 @@ function animarPacman() {
  * @method reiniciar
  */
 function reiniciar() {
-    // Parar animación si está corriendo
+    // parar la animación si está corriendo
     if (animacionActiva) {
         cancelAnimationFrame(animacionActiva);
         animacionActiva = null;
     }
 
-    // Resetear valores
+
     posicionX = 50;
     distanciaFinal = 0;
     spanResultado.textContent = "0";
@@ -156,7 +155,7 @@ function reiniciar() {
     dibujarPacman(posicionX, tamanio);
 }
 
-// ============ EVENTOS ============
+
 
 // Botón CALCULAR
 btnCalcular.addEventListener("click", function() {
@@ -187,7 +186,5 @@ btnAnimar.addEventListener("click", function() {
 // Botón REINICIAR
 btnReiniciar.addEventListener("click", reiniciar);
 
-// ============ INICIO ============
 
-// Dibujar Pacman al cargar la página
 dibujarPacman(50, 40);
